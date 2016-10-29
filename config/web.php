@@ -7,25 +7,25 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-        'cart' => [
-            'class' => 'app\services\Cart2',
+        'cart1' => [
+            'class' => 'app\services\Cart1',
             
         ],
         
-//        'cart' => [
-//            'class' => 'pistol88\cart\Cart',
-//            'currency' => 'р.', //Валюта
-//            'currencyPosition' => 'after', //after или before (позиция значка валюты относительно цены)
-//            'priceFormat' => [0,'.', ''], //Форма цены
-//            'as discount' => [
-//                'class' => 'pistol88\cart\behaviors\Discount',
-//                'persent' => 50,
-//            ],
-//            'as sell' => [
-//                'class' => 'app\behavior\CartSell',
-//                'persent' => 50,
-//            ],
-//        ],
+        'cart' => [
+            'class' => 'pistol88\cart\Cart',
+            'currency' => 'р.', //Валюта
+            'currencyPosition' => 'after', //after или before (позиция значка валюты относительно цены)
+            'priceFormat' => [0,'.', ''], //Форма цены
+            'as discount' => [
+                'class' => 'pistol88\cart\behaviors\Discount',
+                'persent' => 50,
+            ],
+            'as sell' => [
+                'class' => 'app\behavior\CartSell',
+                'persent' => 50,
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'ecv8MdqiLY_zKo_SuOp47-tA4xyhSP_n',

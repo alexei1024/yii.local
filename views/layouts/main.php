@@ -37,9 +37,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'vitamine', 'url' => ['/vitamine/index']],
-           // ['label' => 'myform', 'url' => ['/site/myform']],
-           // ['label' => 'dog', 'url' => ['/site/test']],
+//            ['label' => 'vitamine', 'url' => ['/vitamine/index']],
+//            ['label' => 'myform', 'url' => ['/site/myform']],
+//            ['label' => 'dog', 'url' => ['/site/test']],
+            ['label' => 'truncate', 'url' => ['/site/truncate']],
+            ['label' => 'add', 'url' => ['/site/add']],
             ['label' => 'addcar', 'url' => ['/car/add']],
             ['label' => 'car', 'url' => ['/car/index']],
             ['label' => 'Home', 'url' => ['/site/index']],

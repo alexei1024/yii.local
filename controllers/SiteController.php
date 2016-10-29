@@ -150,7 +150,13 @@ class SiteController extends Controller
     }
     
     public function actionAdd(){
-        $cart = yii::$app->cart->put('Hello');
-        var_dump(yii::$app->cart->getElements());
+        $cart = yii::$app->cart1->put('Hello');
+        //var_dump(yii::$app->cart1->getElements());
+        return $this->render('add');
+    }
+    public function actionTruncate(){
+        $cart = yii::$app->cart1->Truncate();
+        //var_dump(yii::$app->cart1->getElements());
+        return $this->render('add');
     }
 }

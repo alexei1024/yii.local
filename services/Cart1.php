@@ -4,9 +4,9 @@ use \yii\base\Component;
 use \app\interfaces\Cart;
 
 class Cart1 extends Component implements Cart{
-    public function __construct(app\interfaces\Cart $element) {
-        
-    }
+//    public function __construct(app\interfaces\Cart $element) {
+//        
+//    }
 
     public function put($data){ 
         $_SESSION['Cart'][]=$data;
