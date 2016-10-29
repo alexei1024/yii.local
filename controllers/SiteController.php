@@ -148,4 +148,9 @@ class SiteController extends Controller
         return $this->render('myform', ['model' => $model,]);
        
     }
+    
+    public function actionAdd(){
+        $cart = yii::$app->cart->put('Hello');
+        var_dump(yii::$app->cart->getElements());
+    }
 }

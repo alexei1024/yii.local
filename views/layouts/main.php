@@ -38,8 +38,10 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'vitamine', 'url' => ['/vitamine/index']],
-            ['label' => 'myform', 'url' => ['/site/myform']],
-            ['label' => 'dog', 'url' => ['/site/test']],
+           // ['label' => 'myform', 'url' => ['/site/myform']],
+           // ['label' => 'dog', 'url' => ['/site/test']],
+            ['label' => 'addcar', 'url' => ['/car/add']],
+            ['label' => 'car', 'url' => ['/car/index']],
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
@@ -59,7 +61,6 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
