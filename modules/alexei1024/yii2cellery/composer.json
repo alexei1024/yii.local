@@ -1,0 +1,41 @@
+{
+    "name": "alexei1024/yii2cellery",
+    "description": "yii2-shop it's a module for site shop backend",
+    "keywords": ["yii2", "yii 2", "application", "backend", "crud", "shop", "module", "pistol88"],
+    "homepage": "https://github.com/pistol88/yii2-shop",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://github.com/pistol88/yii2-shop"
+    },
+    "authors": [
+        {
+            "name": "Ilya Pistol",
+            "email": "pistol88@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "dektrium/yii2-user": "*",
+        "dektrium/yii2-rbac": "*"
+        
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "autoload": {
+        "psr-4": {
+            "alexei1024\\yii2cellery\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "pistol88\\shop\\Bootstrap"
+    }
+}

@@ -22,12 +22,12 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+               'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['contact'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => ['pistol'],
                     ],
                 ],
             ],
@@ -140,7 +140,16 @@ class SiteController extends Controller
         $dog->name = 'Ваня';
         $dog->validate();
     }
-
+    //события
+    public function actionWow(){
+    $dog = new Dog;
+    $dog->trigger(Dog::EVENT_wow);
+    }
+    
+    
+    
+    //формы
+    
     public function actionMyform() {
             $model = new MyForm();
         if ($model->load(Yii::$app->request->post())){ 

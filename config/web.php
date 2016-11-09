@@ -6,11 +6,28 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'modules' => [
+        'salary' => [
+            'class' => 'app\modules\alexei1024\yii2cellery\Module',
+            'stafferModel' => 'app\models\Dog',
+            // ... другие настройки модуля ...
+        ],
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'admins' => ['alexei'],
+        ],
+        'rbac' => 'dektrium\rbac\RbacWebModule',
+    ],
+
     'components' => [
         'cart1' => [
             'class' => 'app\services\Cart1',
             
         ],
+//        'authManager'  => [
+//        'class'        => 'yii\rbac\DbManager',
+//        //            'defaultRoles' => ['guest'],
+//    ],
         
         'cart' => [
             'class' => 'pistol88\cart\Cart',
@@ -34,7 +51,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'dektrium\user\models\User',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
